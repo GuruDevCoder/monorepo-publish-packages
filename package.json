@@ -1,0 +1,22 @@
+{
+  "name": "at-monorepo-test",
+  "version": "0.0.1",
+  "main": "./index.js",
+  "license": "MIT",
+  "scripts": {
+    "ci:publish": "lerna publish from-package --yes",
+    "bump": "lerna version --yes",
+    "version": "mmarkdown && git add .",
+    "build": "lerna run build"
+  },
+  "devDependencies": {
+    "lerna": "^3.18.5",
+    "mmarkdown": "^1.0.0"
+  },
+  "mmarkdown": {
+    "src": ".readme/index.md",
+    "out": "./readme.md",
+    "scripts": ".readme/index.js",
+    "backup": false
+  }
+}
